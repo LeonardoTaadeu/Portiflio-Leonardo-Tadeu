@@ -3407,10 +3407,20 @@ img.u-pull-left {
     align-items : center;
 }
 
+.about-info__pic-block {
+    display         : flex;
+    justify-content : center;
+}
+
 .about-info__pic {
-    object-fit     : cover;
-    margin         : 0;
-    vertical-align : bottom;
+    display       : block;
+    width         : 100%;
+    max-width     : 400px;
+    height        : auto;
+    aspect-ratio  : 1 / 1;
+    object-fit    : cover;
+    border-radius : 50%;
+    margin        : 0 auto;
 }
 
 .about-info__text {
@@ -3546,6 +3556,10 @@ img.u-pull-left {
         padding     : var(--vspace-1) 0 0 0;
         margin-left : 0;
     }
+
+    .about-info__pic {
+        max-width : 320px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -3567,6 +3581,10 @@ img.u-pull-left {
 @media screen and (max-width: 600px) {
     .about-info {
         width : 100%;
+    }
+
+    .about-info__pic {
+        max-width : 240px;
     }
 }
 
