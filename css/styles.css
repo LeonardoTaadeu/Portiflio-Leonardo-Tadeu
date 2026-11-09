@@ -4256,3 +4256,60 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+/* ===================================================================
+ * # LANGUAGE SWITCHER (PT / EN)
+ *
+ *
+ * ------------------------------------------------------------------- */
+.lang-switch {
+    position         : fixed;
+    top              : calc(6.4rem + 1.6rem);
+    right            : 2.4rem;
+    z-index          : 102;
+    display          : flex;
+    background-color : var(--color-body);
+    border           : 1px solid rgba(255, 255, 255, .15);
+}
+
+.lang-switch__btn {
+    display          : block;
+    height           : 3.2rem;
+    min-width        : 4.4rem;
+    margin           : 0;
+    padding          : 0 1.2rem;
+    font-family      : var(--font-1);
+    font-size        : 10px;
+    font-weight      : 400;
+    line-height      : 3.2rem;
+    letter-spacing   : .35em;
+    text-transform   : uppercase;
+    color            : white;
+    background-color : transparent;
+    border           : none;
+    border-radius    : 0;
+    cursor           : pointer;
+    transition       : color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.lang-switch__btn + .lang-switch__btn {
+    border-left : 1px solid rgba(255, 255, 255, .15);
+}
+
+.lang-switch__btn:hover,
+.lang-switch__btn:focus {
+    color            : var(--color-1);
+    background-color : transparent;
+}
+
+.lang-switch__btn[aria-pressed="true"] {
+    color            : var(--color-body);
+    background-color : var(--color-1);
+}
+
+@media screen and (max-width: 800px) {
+    .lang-switch {
+        top   : calc((6.4rem - 3.4rem) / 2);
+        right : calc(6.4rem + .8rem);
+    }
+}

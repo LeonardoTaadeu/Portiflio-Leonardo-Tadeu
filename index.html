@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<html class="no-js ss-preload" lang="pt-BR">
 <head>
 
     <!--- basic page needs
@@ -28,6 +28,13 @@
 </head>
 
 <body id="top">
+
+    <!-- # language switcher
+    ================================================== -->
+    <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-switch__btn" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
 
 
     <!-- # preloader
@@ -65,8 +72,8 @@
                     <ul>
                         <li><a href="index.html" class="home-link">Leonardo</a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">Sobre</a></li>
-                        <li><a href="#contact" class="smoothscroll">Entre em contato</a></li>
+                        <li><a href="#about" class="smoothscroll" data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="#contact" class="smoothscroll" data-i18n="nav.contact">Entre em contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -90,7 +97,7 @@
                             Hello World
                         </div>
 
-                        <h1 class="text-huge-title">
+                        <h1 class="text-huge-title" data-i18n="intro.title">
                             Eu sou Leonardo, <br>
                             QA Engineer na OrçaFascio <br>
                             e estudante de <br> 
@@ -123,16 +130,16 @@
 
                     <div class="column lg-6 md-12 about-info__pic-block">
                         <img src="images/about-photo.jpg"
-                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="Foto de Leonardo Tadeu" class="about-info__pic" width="400" height="400" data-animate-el>
+                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="Foto de Leonardo Tadeu" data-i18n-alt="about.photoAlt" class="about-info__pic" width="400" height="400" data-animate-el>
                     </div>
 
                     <div class="column lg-6 md-12">
                         <div class="about-info__text" >
 
-                            <h2 class="text-pretitle with-line" data-animate-el>
+                            <h2 class="text-pretitle with-line" data-animate-el data-i18n="about.title">
                                 Sobre
                             </h2>
-                            <p class="attention-getter" data-animate-el>
+                            <p class="attention-getter" data-animate-el data-i18n="about.text">
                                 Sou Leonardo, QA Engineer na OrçaFascio e estudante de Ciência da
                                 Computação na UFABC. Comecei como Jovem Aprendiz na AkzoNobel,
                                 passei por suporte de TI e help desk, e hoje escrevo testes automatizados <br>
@@ -151,13 +158,13 @@
                 <div class="row about-expertise" data-animate-block>
                     <div class="column lg-12">
 
-                        <h2 class="text-pretitle" data-animate-el>Competências</h2>
+                        <h2 class="text-pretitle" data-animate-el data-i18n="skills.title">Competências</h2>
 
                         <ul class="skills-list h1" data-animate-el>
                             <li>Cypress</li>
                             <li>Jira</li>
-                            <li>Testes E2E</li>
-                            <li>Git e GitHub</li>
+                            <li data-i18n="skills.e2e">Testes E2E</li>
+                            <li data-i18n="skills.git">Git e GitHub</li>
                             <li>Postman</li>
                             <li>JMeter</li>
                             <li>Burp Suite</li>
@@ -171,7 +178,7 @@
 
                     <div class="column lg-6 tab-12">
 
-                        <h2 class="text-pretitle" data-animate-el>
+                        <h2 class="text-pretitle" data-animate-el data-i18n="exp.title">
                             Experiência
                         </h2>
 
@@ -182,10 +189,10 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">OrçaFascio</h3>
                                     <h5 class="timeline__meta">Quality Assurance</h5>
-                                    <p class="timeline__timeframe">Abril 2025 - O momento</p>
+                                    <p class="timeline__timeframe" data-i18n="exp.orca.date">Abril 2025 - O momento</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Atuo como QA na OrçaFascio, garantindo a qualidade de um software de orçamento de obras usado por construtoras e órgãos públicos. No dia a dia, reviso e valido as entregas do time no Jira, escrevo testes automatizados com Cypress para encontrar falhas antes que cheguem ao usuário e investigo bugs junto com os desenvolvedores até chegar à causa. Como comecei na empresa pelo suporte, conheço de perto como os clientes usam o sistema, e levo isso para os testes, pensando nos fluxos reais e nos casos que ninguém previu.</p>
+                                    <p data-i18n="exp.orca.desc">Atuo como QA na OrçaFascio, garantindo a qualidade de um software de orçamento de obras usado por construtoras e órgãos públicos. No dia a dia, reviso e valido as entregas do time no Jira, escrevo testes automatizados com Cypress para encontrar falhas antes que cheguem ao usuário e investigo bugs junto com os desenvolvedores até chegar à causa. Como comecei na empresa pelo suporte, conheço de perto como os clientes usam o sistema, e levo isso para os testes, pensando nos fluxos reais e nos casos que ninguém previu.</p>
                                 </div>
                             </div>
 
@@ -193,11 +200,11 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">ABC Sistemas</h3>
-                                    <h5 class="timeline__meta">Suporte de TI</h5>
-                                    <p class="timeline__timeframe">Setembro 2023 - Maio 2024</p>
+                                    <h5 class="timeline__meta" data-i18n="exp.abc.role">Suporte de TI</h5>
+                                    <p class="timeline__timeframe" data-i18n="exp.abc.date">Setembro 2023 - Maio 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Responsável por prestar suporte técnico aos usuários do sistema ERP da Moda, auxiliando na resolução de problemas, esclarecimento de dúvidas e otimização do uso das funcionalidades do sistema.</p>
+                                    <p data-i18n="exp.abc.desc">Responsável por prestar suporte técnico aos usuários do sistema ERP da Moda, auxiliando na resolução de problemas, esclarecimento de dúvidas e otimização do uso das funcionalidades do sistema.</p>
                                 </div>
                             </div>
     
@@ -205,11 +212,11 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Azko Nobel</h4>
-                                    <h5 class="timeline__meta">Jovem Aprendiz</h5>
-                                    <p class="timeline__timeframe">Junho 2022 - Setembro 2023</p>
+                                    <h5 class="timeline__meta" data-i18n="exp.akzo.role">Jovem Aprendiz</h5>
+                                    <p class="timeline__timeframe" data-i18n="exp.akzo.date">Junho 2022 - Setembro 2023</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Iniciei minha trajetória profissional como jovem aprendiz no setor administrativo da Akzo Nobel, onde auxiliei na gestão de documentações e relatórios na fábrica de tintas de Santo André. Durante esse período, pude receber um reconhecimento ao desenvolver uma planilha para metrificar riscos e possíveis acidentes na fábrica. Essa ferramenta contribuiu diretamente para minimizar os riscos operacionais e prevenir futuros acidentes.</p>
+                                    <p data-i18n="exp.akzo.desc">Iniciei minha trajetória profissional como jovem aprendiz no setor administrativo da Akzo Nobel, onde auxiliei na gestão de documentações e relatórios na fábrica de tintas de Santo André. Durante esse período, pude receber um reconhecimento ao desenvolver uma planilha para metrificar riscos e possíveis acidentes na fábrica. Essa ferramenta contribuiu diretamente para minimizar os riscos operacionais e prevenir futuros acidentes.</p>
                                 </div>
                             </div>
     
@@ -219,7 +226,7 @@
 
                     <div class="column lg-6 tab-12">
 
-                        <h2 class="text-pretitle" data-animate-el>
+                        <h2 class="text-pretitle" data-animate-el data-i18n="edu.title">
                             Educação
                         </h2>
 
@@ -229,7 +236,7 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Universidade Federal do ABC</h3>
-                                    <h5 class="timeline__meta">Bacharelado em Ciência e Tecnologia</h5>
+                                    <h5 class="timeline__meta" data-i18n="edu.bct">Bacharelado em Ciência e Tecnologia</h5>
                                     <p class="timeline__timeframe">Junho 2025 - O Momento</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -241,7 +248,7 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Universidade Federal do ABC</h4>
-                                    <h5 class="timeline__meta">Bacharelado em Ciência da Computação</h5>
+                                    <h5 class="timeline__meta" data-i18n="edu.bcc">Bacharelado em Ciência da Computação</h5>
                                     <p class="timeline__timeframe">Junho 2025 - O Momento</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -271,10 +278,10 @@
                                         <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Misael Carvalho</strong>
-                                            <span>Engenheiro Elétrico</span>
+                                            <span data-i18n="testi.misael.role">Engenheiro Elétrico</span>
                                         </cite>
                                     </div>
-                                    <p>
+                                    <p data-i18n="testi.misael.text">
                                         O Leonardo é um profissional que tive a oportunidade de conhecer através do curso de Jovem Aprendiz. Um jovem muito curioso, cheio de ideias e convicções, que sempre está disposto a tornar as atividades em grupo nas melhores possíveis. É muito atencioso aos processos, além de possuir um riquíssimo capital intelectual, o que confere às discussões e projetos um ótimo tom de clareza e compreensão. Trabalhar com o Leonardo acaba tornando-se uma atividade de muito aprendizado e dedicação.
                                     </p>
                                 </div> <!-- end testimonial-slider__slide -->
@@ -287,7 +294,7 @@
                                             <span>Quality Assurance, OrçaFascio</span>
                                         </cite>
                                     </div>
-                                    <p>
+                                    <p data-i18n="testi.caio.text">
                                     Tive o prazer de trabalhar com o Leonardo na área de QA e, sem dúvida, ele é daqueles profissionais que fazem a diferença no time. Com um olhar critico e atenção aos detalhes, ele encontrava problemas antes que chegassem ao usuário final, o que elevava a qualidade de cada entrega. <br>
                                     Além da competência técnica, o Leonardo tem uma comunicação clara e uma postura colaborativa: aponta falhas de forma construtiva, já chega com sugestões e conversa de igual para igual com devs, POS e outras áreas. Também compartilha conhecimento com generosidade e ajuda quem está ao redor a crescer. <br>
                                     Comprometido, organizado e confiável, ele deixa qualquer equipe melhor do que encontrou. Recomendo o trabalho dele de olhos fechados! <br>
@@ -342,11 +349,11 @@
 
                 <div class="row contact-top">
                     <div class="column lg-12">
-                        <h2 class="text-pretitle">
+                        <h2 class="text-pretitle" data-i18n="contact.title">
                             Entre em contato
                         </h2>
 
-                        <p class="h1">
+                        <p class="h1" data-i18n="contact.text">
                             Será um prazer contribuir com minha dedicação e conhecimento para o crescimento da sua equipe.
                         </p>
                     </div>
@@ -354,7 +361,7 @@
 
                 <div class="row contact-bottom">
                     <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Contato</h3>
+                        <h3 class="text-pretitle" data-i18n="contact.label">Contato</h3>
                         <p class="contact-links">
                             <a href="#">+55 (11) 97740-0927</a>
                             <a href="mailto:leonardo.pedrobr@gmail.com" class="mailtoui">leonardo.pedrobr@gmail.com</a> <br>
@@ -369,7 +376,7 @@
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:leonardo.pedrobr@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Me diga um Oi</a>
+                        <a href="mailto:leonardo.pedrobr@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn" data-i18n="contact.btn">Me diga um Oi</a>
                     </div>
                 </div> <!-- end contact-bottom -->
 
@@ -404,6 +411,7 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
 
 </body>
 </html>
